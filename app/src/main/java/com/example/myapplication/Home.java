@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Home extends AppCompatActivity {
 
-    ImageView g, h, t;
+    ImageView g, h, t, k;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class Home extends AppCompatActivity {
         g = (ImageView)findViewById(R.id.imageView26);
         h = (ImageView)findViewById(R.id.imageView28);
         t = (ImageView)findViewById(R.id.imageView34);
+        k = (ImageView)findViewById(R.id.imageView17);
 
         imageClick();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -51,6 +52,13 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, Favorite.class);
+                startActivity(intent);
+            }
+        });
+        k.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, MyCart.class);
                 startActivity(intent);
             }
         });

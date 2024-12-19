@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class OnBoard1 extends AppCompatActivity {
+public class Popular extends AppCompatActivity {
 
     ImageView g;
 
@@ -19,9 +19,9 @@ public class OnBoard1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_on_board1);
+        setContentView(R.layout.activity_popular);
 
-        g = (ImageView)findViewById(R.id.imageView7);
+        g = (ImageView)findViewById(R.id.imageView21);
 
         imageClick();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -34,13 +34,9 @@ public class OnBoard1 extends AppCompatActivity {
         g.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OnBoard1.this, onBoard2.class);
+                Intent intent = new Intent(Popular.this, Home.class);
                 startActivity(intent);
             }
         });
-    }
-    public void startActivity(View v){
-        Intent intent = new Intent(OnBoard1.this, Home.class);
-        startActivity(intent);
     }
 }

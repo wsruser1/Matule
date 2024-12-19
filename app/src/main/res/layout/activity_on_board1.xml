@@ -35,6 +35,7 @@
         android:layout_height="63dp"
         android:layout_marginTop="752dp"
         android:backgroundTint="#FFFFFF"
+        android:onClick="startActivity"
         android:text="Начать"
         android:textColor="#2B2B2B"
         app:layout_constraintEnd_toEndOf="parent"

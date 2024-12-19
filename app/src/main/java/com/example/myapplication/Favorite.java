@@ -11,18 +11,19 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class OnBoard1 extends AppCompatActivity {
+public class Favorite extends AppCompatActivity {
 
-    ImageView g;
+    ImageView h, k, u;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_on_board1);
+        setContentView(R.layout.activity_favorite);
 
-        g = (ImageView)findViewById(R.id.imageView7);
-
+        h = (ImageView)findViewById(R.id.imageView33);
+        k = (ImageView)findViewById(R.id.imageView42);
+        u = (ImageView)findViewById(R.id.imageView44);
         imageClick();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -31,16 +32,26 @@ public class OnBoard1 extends AppCompatActivity {
         });
     }
     public void imageClick(){
-        g.setOnClickListener(new View.OnClickListener() {
+        h.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OnBoard1.this, onBoard2.class);
+                Intent intent = new Intent(Favorite.this, Home.class);
                 startActivity(intent);
             }
         });
-    }
-    public void startActivity(View v){
-        Intent intent = new Intent(OnBoard1.this, Home.class);
-        startActivity(intent);
+        k.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Favorite.this, Home.class);
+                startActivity(intent);
+            }
+        });
+        u.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Favorite.this, Detalis.class);
+                startActivity(intent);
+            }
+        });
     }
 }
